@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +12,19 @@
 <body>
     <div class="header">
         <div class="top">
-            <label for="search">
-                <img src="./img/magnify.svg" alt="Search icon">
-            </label>
-            <input type="search" id="search" name="search">
-            <button class="bell">
-                bell
-            </button>
-            <img src="./img/icon.png" alt="Your photo" class="icon" id="small">
-            <div class="name">John Doe</div>
+            <div class="search-stuff">
+                <label for="search">
+                    <img src="./img/magnify.svg" alt="Search icon">
+                </label>
+                <input type="search" id="search" name="search">
+            </div>
+            <div class="top-stuff">
+                <button class="bell">
+                    <img src="./img/bell-ring-outline.svg" alt="Notifications icon">
+                </button>
+                <img src="./img/icon.png" alt="Your photo" class="icon" id="small">
+                <div class="name">John Doe</div>
+            </div>
         </div>
         <div class="bottom">
             <div class="user-info">
