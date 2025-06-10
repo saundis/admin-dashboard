@@ -34,25 +34,36 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 /* Design */
+
 :root {
-    --blue: rgb(48, 155, 243);
+    --blue: rgb(59, 147, 219);
 }
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: max(15vh, 175px) 1fr;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 185px 1fr;
     font-family: 'Roboto', serif;
 }
 
 .header {
     grid-area: 1 / 2 / 2 / 3;
-    box-shadow: 4px 4px 4px rgb(197, 197, 197);
+    box-shadow: 4px 4px 4px rgb(204, 204, 204);
     position: relative;
     z-index: 2;
     display: grid;
     grid-template-rows: 75px 1fr;
+    padding-right: 0.5rem;
 }
 
 .header .top {
@@ -71,7 +82,7 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: 3vw;
+    padding-left: 2.5vw;
     gap: 1rem;
 
 }
@@ -126,16 +137,17 @@ body {
 .header .bottom {
     display: grid;
     grid-auto-flow: column;
+    padding-bottom: 0.25rem;
 }
 
 .header .bottom {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.25fr 1fr;
     grid-auto-flow: column;
 }
 
 .header .bottom .user-info {
-    padding-left: 3vw;
+    padding-left: 2.5vw;
     display: flex;
     align-items: center;
     gap: 1.75rem;
@@ -145,11 +157,16 @@ body {
     height: 4.5rem;
 }
 
+.header .bottom h1 {
+    text-wrap: nowrap;
+    font-size: 2em;
+}
+
 .header .bottom .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .header .bottom .buttons button {
@@ -157,14 +174,12 @@ body {
     color: white;
     border-width: 0;
     border-radius: 25px;
-    padding: 0.35rem 1.75rem;
+    padding: 0.4rem 1.75rem;
     width: 110px;
     font-weight: 700;
 }
 
-img {
-    aspect-ratio: 1 / 1;
-    height: 2rem;
+.header img {
     border-radius: 50%;
 }
 
@@ -174,9 +189,167 @@ img {
     position: relative;
     z-index: 3;
     box-shadow: 2px 2px 2px rgb(204, 204, 204);
+    color: white;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    position: fixed;
+    width: 300px;
+    height: 100%;
 }
+
+.sidebar > div, .sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.sidebar .title div {
+    font-size: 1.75rem;
+}
+
+.sidebar .title img {
+    height: 2.75rem;
+}
+
+.sidebar .title {
+    margin-bottom: 3rem;
+}
+
+.sidebar ul li {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul li:last-child {
+    margin-bottom: 4rem;
+}
+
+.sidebar ul img {
+    height: 1.75rem;
+}
+
 
 .main {
     grid-area: 2 / 2 / 3 / 3;
     background-color: rgb(226, 232, 240);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.main .title {
+    margin-top: 0.25rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.main .projects {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .projects .container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.main .projects .container .card {
+    background-color: rgb(240, 180, 41);
+    box-shadow: 4px 4px 4px rgb(204, 204, 204);
+    padding-left: 0.5rem;
+    border-radius: 10px;
+}
+
+.main .projects .container .card-info {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 1.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.main .projects .container .card-info p {
+    height: 125px;
+}
+
+.main .projects .container .card-info .card-icons {
+    align-self: flex-end;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    width: 175px;
+}
+
+.main .announcements {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-bottom: 2rem;
+}
+
+.main .announcements .container,
+.main .trending .container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgb(204, 204, 204);
+    padding: 2.5rem 2rem;
+}
+
+.main .announcements .container p {
+    font-size: 0.9rem;
+}
+
+.main .announcements .container .card:not(:last-child) {
+    border-bottom: 1px solid rgb(99, 99, 99);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main .trending {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.main .trending .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.main .trending .container .card {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.main .trending img {
+    border-radius: 50%;
+    height: 3rem;
+}
+
+.main .trending .container .card h5{
+    font-size: 1rem;
+}
+
+.main p {
+    color: rgb(99, 99, 99);
+    font-weight: 375;
+}
+
+
+img {
+    aspect-ratio: 1 / 1;
+    height: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0.75rem;
 }
