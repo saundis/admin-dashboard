@@ -10,7 +10,7 @@
     <div class="header">
         <div class="top">
             <label for="search">
-                s
+                <img src="./img/magnify.svg" alt="Search icon">
             </label>
             <input type="search" id="search" name="search">
             <button class="bell">
@@ -22,8 +22,10 @@
         <div class="bottom">
             <div class="user-info">
                 <img src="./img/icon.png" alt="Your photo" class="icon" id="big">
-                <h4>Hi there,</h4>
-                <h1>John Doe (@john)</h1>
+                <div class="greeting">
+                    <h4>Hi there,</h4>
+                    <h1>John Doe (@john)</h1>
+                </div>
             </div>
             <div class="buttons">
                 <button>New</button>
@@ -33,19 +35,19 @@
         </div>
     </div>
     <div class="sidebar">
-        <div>Dashboard</div>
+        <div><span class="title-icon"><img src="./img/view-dashboard.svg"></span> Dashboard</div>
         <ul>
-            <li><span class="list-icon">icon</span> Home</li>
-            <li><span class="list-icon">icon</span> Profile</li>
-            <li><span class="list-icon">icon</span> Message</li>
-            <li><span class="list-icon">icon</span> History</li>
-            <li><span class="list-icon">icon</span> Tasks</li>
-            <li><span class="list-icon">icon</span> Communities</li>
+            <li><span class="list-icon"><img src="./img/home.svg"></span> Home</li>
+            <li><span class="list-icon"><img src="./img/card-account-details-outline.svg"></span> Profile</li>
+            <li><span class="list-icon"><img src="./img/message-reply.svg"></span> Message</li>
+            <li><span class="list-icon"><img src="./img/history.svg"></span> History</li>
+            <li><span class="list-icon"><img src="./img/note-multiple.svg"></span> Tasks</li>
+            <li><span class="list-icon"><img src="./img/account-group.svg"></span> Communities</li>
         </ul>
         <ul>
-            <li><span class="list-icon">icon</span> Settings</li>
-            <li><span class="list-icon">icon</span> Support</li>
-            <li><span class="list-icon">icon</span> Privacy</li>
+            <li><span class="list-icon"><img src="./img/cog.svg"></span> Settings</li>
+            <li><span class="list-icon"><img src="./img/help-circle-outline.svg"></span> Support</li>
+            <li><span class="list-icon"><img src="./img/shield-check.svg"></span> Privacy</li>
         </ul>
     </div>
     <div class = "main">
@@ -54,23 +56,163 @@
             <div class="container">
                 <div class="card">
                     <div class="card-info">
-                        <h3>Super Cool Project</h3>
-                        <p>
-                            Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
-                            nibh erat, id facilisis felis accumsan nec.
-                        </p>
+                        <div class="word-info">
+                            <h3>Super Cool Project</h3>
+                            <p>
+                                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                                nibh erat, id facilisis felis accumsan nec.
+                            </p>
+                        </div>
                         <div class="card-icons">
-                            stuff
+                            <img src="./img/star-plus-outline.svg" alt="Add to favorites">
+                            <img src="./img/eye-plus-outline.svg" alt="View the project">
+                            <img src="./img/source-fork.svg" alt="Fork the project">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="word-info">
+                            <h3>Less Cool Project</h3>
+                            <p>
+                                Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor
+                                tincidunt consectetur sapien et, facilisis dolor. Duis sem purus, dignissim
+                                ut sapien in, varius pellentesque lacus.
+                            </p>
+                        </div>
+                        <div class="card-icons">
+                            <img src="./img/star-plus-outline.svg" alt="Add to favorites">
+                            <img src="./img/eye-plus-outline.svg" alt="View the project">
+                            <img src="./img/source-fork.svg" alt="Fork the project">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="word-info">
+                            <h3>Impossible App</h3>
+                            <p>
+                                In hac habitasse platea dictumst. Vivamus dictum rutrum arcu,
+                                a placerat velit sagittis id.
+                            </p>
+                        </div>
+                        <div class="card-icons">
+                            <img src="./img/star-plus-outline.svg" alt="Add to favorites">
+                            <img src="./img/eye-plus-outline.svg" alt="View the project">
+                            <img src="./img/source-fork.svg" alt="Fork the project">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="word-info">
+                            <h3>Easy Peasy App</h3>
+                            <p>
+                                Etiam cursus eros ac efficitur fringilla. Vestibulum dignissium
+                                urna eget accumsan aliquam. Curabitur dignissim nisi in tortor
+                                commodo, ac bibendum magna tincidunt.
+                            </p>
+                        </div>
+                        <div class="card-icons">
+                            <img src="./img/star-plus-outline.svg" alt="Add to favorites">
+                            <img src="./img/eye-plus-outline.svg" alt="View the project">
+                            <img src="./img/source-fork.svg" alt="Fork the project">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="word-info">
+                            <h3>Ad Blocker</h3>
+                            <p>
+                                Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus
+                                vel, pharetra hendrerit felis. Aliquam sed malesuada eros.
+                            </p>
+                        </div>
+                        <div class="card-icons">
+                            <img src="./img/star-plus-outline.svg" alt="Add to favorites">
+                            <img src="./img/eye-plus-outline.svg" alt="View the project">
+                            <img src="./img/source-fork.svg" alt="Fork the project">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <div class="word-info">
+                            <h3>Money Maker</h3>
+                            <p>
+                                Praesent convallis, libero quis congue elementum, nunc
+                                ante faucibus sapien, ac scelerisque tortor purus sit amet
+                                ex. pellentesquemollis nec sem vel aliquam.
+                            </p>
+                        </div>
+                        <div class="card-icons">
+                            <img src="./img/star-plus-outline.svg" alt="Add to favorites">
+                            <img src="./img/eye-plus-outline.svg" alt="View the project">
+                            <img src="./img/source-fork.svg" alt="Fork the project">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="announcements">
-
+            <div class="title">Announcements</div>
+            <div class="main-card">
+                <div class="card">
+                    <h4>Site Maintence</h4>
+                    <p>
+                        Vestibulum condimentum tellus lacus, in accumsan elit maximus
+                        ac. Donec hendrerit sodales congue...
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Community Share Day</h4>
+                    <p>
+                        Nam vel lectus tincidunt, retrum nulla eu, ornare libero.
+                        Aliquam dictum accumsan porttitor...
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Updated Privacy Policy</h4>
+                    <p>
+                        Phasellus effictur nisl eget elit consectetur, eget condimentum
+                        ante auctor. Cras fringilla sagittis sem in mattis...
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="trending">
-
+            <div class="title">Trending</div>
+            <div class="main-card">
+                <div class="card">
+                    <img src="./img/lightblue-icon.jpg" alt="User icon" class="icon" id="small">
+                    <div class="person-info">
+                        <h5>@tegan</h5>
+                        <p>World Peace Build</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/icon.png" alt="User icon" class="icon" id="small">
+                    <div class="person-info">
+                        <h5>@morgan</h5>
+                        <p>Super Cool Project</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/green-icon.jpg" alt="User icon" class="icon" id="small">
+                    <div class="person-info">
+                        <h5>@kendall</h5>
+                        <p>Life Changing App</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/darkblue-icon.jpg" alt="User icon" class="icon" id="big">
+                    <div class="person-info">
+                        <h5>@alex</h5>
+                        <p>No Traffic Maker</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
